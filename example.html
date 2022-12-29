@@ -1,0 +1,65 @@
+<html>
+	<head>
+		<script type="text/javascript" src="../src/OrgChart.js"></script>
+		<script type="text/javascript">
+			var tree;
+			function init() {
+				var treeContainer = document.getElementById("treeContainer");
+				tree = new oj.visualization.OrgChart({
+					"container" : treeContainer,
+					"options" : {
+						"highlightSubtree" : true,
+						"allowCollapse" : true,
+						"selectable" : true,
+						"showHoverColors" : true,
+						"editable" : true
+					}
+				});
+				tree.setData([
+					["RamDutt Joshi", "RamDutt Joshi", "Grand  Grand Father"],
+					["BhopalDutt ji", "RamDutt Joshi"],
+					["Jaggan Nath", "RamDutt Joshi"],
+					["Madhwa Nand", "RamDutt Joshi"],
+					["Chander Prakash Joshi", "BhopalDutt ji"],
+					["Neema", "BhopalDutt ji"],
+					["Nawal Joshi", "Jaggan Nath"],
+					["Umesh", "Jaggan Nath"],
+					["Prem Prakahs", "Madhwa Nand"],
+					["Lalit Mohan", "Madhwa Nand", "", "Anil"]
+				]);
+				tree.draw();
+				tree.setEventListener("node-select", selectHandler);
+				tree.setEventListener("node-collapse", collapseHandler);
+				tree.setEventListener("node-dbclick", dbclickHandler);
+				tree.setEventListener("node-hover", hoverHandler);
+			}
+
+			function selectHandler(eventObject) {
+				console.log("Selected : " + eventObject["nodeObject"].name);
+			}
+
+			function collapseHandler(eventObject) {
+				debugger;
+				console.log("Collpased : " + eventObject["nodeObject"].name + ", isCollapsed : " + eventObject["isCollapsed"]);
+			}			
+
+			function dbclickHandler(eventObject) {
+				debugger;
+				console.log("Double clicked : " + eventObject["nodeObject"].name);
+			}
+
+			function hoverHandler(eventObject) {
+				console.log("Hovered : " + eventObject["nodeObject"].name);
+			}
+
+			function getData() {
+				var data = tree.getData();
+				debugger;
+			}
+		</script>
+	</head>
+	<body onload="init();">
+		<div id="treeContainer"/>
+		<button id="test" onclick="getData();">Get Data</button>
+	</body>
+</html>
