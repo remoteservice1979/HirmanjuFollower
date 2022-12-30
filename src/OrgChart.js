@@ -273,9 +273,9 @@ oj.visualization.OrgChart = (function() {
                         var br = `<div class="card">
                           <img src="img_avatar.png" alt="Avatar" style="width:100%">
                           <div class="container">
-                            <h4><b>this.name </b></h4>
+                            <h4><b>${this.name} </b></h4>
                              <h1><b> Village or Address </b></h1>
-                            <p> this.data</p>
+                            <p> ${this.data}</p>
                           </div>
                         </div>`
                         element.innerHTML = br;
