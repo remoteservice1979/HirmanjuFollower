@@ -270,8 +270,15 @@ oj.visualization.OrgChart = (function() {
                     properties["attributes"]["colspan"] = this.dimensionMatrix[i][j];
                     var element = this.htmlContent[i][j] = createNode("td", properties);
                     if (i == 1 && j == 1) {
-                        var br = `<br/>`;
-                        element.innerHTML = this.name + br + this.data;
+                        var br = `<div class="card">
+                          <img src="img_avatar.png" alt="Avatar" style="width:100%">
+                          <div class="container">
+                            <h4><b>this.name </b></h4>
+                             <h1><b> Village or Address </b></h1>
+                            <p> this.data</p>
+                          </div>
+                        </div>`
+                        element.innerHTML = br;
                         element.onclick = oj.utilities.Events.bindHandler(nodeClickHandler, this);
                         element.ondblclick = oj.utilities.Events.bindHandler(nodeDblClickHandler, this);
                         element.onmouseover = oj.utilities.Events.bindHandler(mouseOverHandler, this);
