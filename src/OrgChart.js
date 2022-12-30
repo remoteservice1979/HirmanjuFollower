@@ -270,7 +270,7 @@ oj.visualization.OrgChart = (function() {
                     properties["attributes"]["colspan"] = this.dimensionMatrix[i][j];
                     var element = this.htmlContent[i][j] = createNode("td", properties);
                     if (i == 1 && j == 1) {
-                        element.innerHTML = this.name;
+                        element.innerHTML = this.name + "    Gram & Present Address " + this.data;
                         element.onclick = oj.utilities.Events.bindHandler(nodeClickHandler, this);
                         element.ondblclick = oj.utilities.Events.bindHandler(nodeDblClickHandler, this);
                         element.onmouseover = oj.utilities.Events.bindHandler(mouseOverHandler, this);
