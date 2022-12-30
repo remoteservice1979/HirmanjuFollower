@@ -746,6 +746,7 @@ oj.visualization.OrgChart = (function() {
         var setPosition = function(left, top) {
             this.table.style.top = top + "px";
             this.table.style.left = left + "px";
+            this.table.style.overflow = "auto";
         };
 
         prototypeObject["setData"] = setData;
