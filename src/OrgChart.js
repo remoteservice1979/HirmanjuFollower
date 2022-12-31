@@ -118,6 +118,7 @@ oj.visualization.OrgChart = (function() {
         this.data = inputObj["data"] || undefined;
         this.cast = inputObj.orgChart.userData[index][5] || undefined;
         this.wife = inputObj.orgChart.userData[index][6] || undefined;
+        this.mobile = inputObj.orgChart.userData[index][7] || undefined;
         this.userData = inputObj["userData"];
         this.nodePosition = inputObj["nodePosition"];
         this.setParentNode(inputObj["parentNode"]);
@@ -286,6 +287,8 @@ oj.visualization.OrgChart = (function() {
                               <hr/>
                             <h4><b> Village or Address </b></h4>
                             <p> ${this.data}</p>
+                             <h4><b> Mobile # </b></h4>
+                            <p> ${this.mobile}</p>
                           </div>
                         </div>`
                         element.innerHTML = br;
@@ -594,6 +597,8 @@ oj.visualization.OrgChart = (function() {
             "tooltip": nodeData[2] || "",
             "cast": nodeData[6] || undefined,
             "wife": nodeData[7] || undefined,
+            "mobile": nodeData[8] || undefined,
+ 
             "data": nodeData[3] || undefined,
             "parentNode": parentNodeObj,
             "nodePosition": nodePos,
