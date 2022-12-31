@@ -277,7 +277,11 @@ oj.visualization.OrgChart = (function() {
                           <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSey32qLntF5eQEvRTcx3ObwVYk6ioccq2p8g&usqp=CAU" alt="Avatar" style="width:86%">
                           <div class="container">
                             <h4><b>${this.name} </b></h4>
-                             <h4><b> Village or Address </b></h4>
+                            <h4><b>Wife </b></h4>
+                             <p> ${this.wife}</p>
+                              <h4><b>Cast </b></h4>
+                             <p> ${this.cast}</p>
+                            <h4><b> Village or Address </b></h4>
                             <p> ${this.data}</p>
                           </div>
                         </div>`
