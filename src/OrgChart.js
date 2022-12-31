@@ -112,9 +112,12 @@ oj.visualization.OrgChart = (function() {
         if (inputObj.name === "" || !inputObj.name) {
             throw "Node name not provided for the node";
         }
+        var index = inputObj['nodeIndex']
         this.name = inputObj["name"];
         this.tooltip = inputObj["tooltip"] || "";
         this.data = inputObj["data"] || undefined;
+        this.cast = inputObj.orgChart.userData[index][5] || undefined;
+        this.wife = inputObj.orgChart.userData[index][6] || undefined;
         this.userData = inputObj["userData"];
         this.nodePosition = inputObj["nodePosition"];
         this.setParentNode(inputObj["parentNode"]);
@@ -582,6 +585,8 @@ oj.visualization.OrgChart = (function() {
         var currentNode = new Node({
             "name": nodeData[0],
             "tooltip": nodeData[2] || "",
+            "cast": nodeData[6] || undefined,
+            "wife": nodeData[7] || undefined,
             "data": nodeData[3] || undefined,
             "parentNode": parentNodeObj,
             "nodePosition": nodePos,
