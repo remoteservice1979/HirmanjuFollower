@@ -275,8 +275,8 @@ oj.visualization.OrgChart = (function() {
                     var element = this.htmlContent[i][j] = createNode("td", properties);
                     if (i == 1 && j == 1) {
                         var br = `<div class="card">
-                          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSey32qLntF5eQEvRTcx3ObwVYk6ioccq2p8g&usqp=CAU" alt="Avatar" style="width:86%">
-                          <div class="container">
+                         
+                          <div class="container" style="overflow: scroll; max-height: 145px; width: max-content;">
                             <h4><b>${this.name} </b></h4>
                             <hr/>
                             <h4><b>Wife or Husband </b></h4>
