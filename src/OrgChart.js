@@ -278,7 +278,7 @@ oj.visualization.OrgChart = (function() {
                           <div class="container">
                             <h4><b>${this.name} </b></h4>
                             <hr/>
-                            <h4><b>Wife Name </b></h4>
+                            <h4><b>Wife or Husband </b></h4>
                             <p> ${this.wife}</p>
                               <hr/>
                               <h4><b>Cast </b></h4>
