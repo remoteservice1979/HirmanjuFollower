@@ -276,7 +276,7 @@ oj.visualization.OrgChart = (function() {
                     if (i == 1 && j == 1) {
                         var br = `<div class="card">
                          
-                          <div class="container" style="overflow: scroll; max-height: 145px;">
+                          <div  class="container" style="overflow: scroll; max-height: 145px; this.purvaj === "purvaj" ? background-color: "red" : background :"green" " >
                             <h4><b>${this.name} </b></h4>
                             <hr/>
                             <h4><b>Wife or Husband </b></h4>
@@ -595,6 +595,7 @@ oj.visualization.OrgChart = (function() {
         var currentNode = new Node({
             "name": nodeData[0],
             "tooltip": nodeData[2] || "",
+            "purvaj:nodeData[5] || undefined,
             "cast": nodeData[6] || undefined,
             "wife": nodeData[7] || undefined,
             "mobile": nodeData[8] || undefined,
