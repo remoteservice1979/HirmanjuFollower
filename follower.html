@@ -1,6 +1,9 @@
 <html>
 	<head>
-		<script type="text/javascript" src="https://remoteservice1979.github.io/HirmanjuFollower/src/OrgChart.js"></script>
+		<script type="text/javascript" src="https://remoteservice1979.github.io/HirmanjuFollower/src/OrgChart.js">
+		
+		
+		</script>
 			<div id="google_translate_element"></div>
 		<title>
 			<link rel="icon" href="https://remoteservice1979.github.io/HirmanjuFollower/src/Hirmanju.jpg" type="image/jpg" sizes="16x16">
@@ -84,6 +87,33 @@
 		<script type="text/javascript">
 			var tree;
 			function init() {
+				
+				$(document).ready(function(){
+					$('.customer-logos').slick({
+						slidesToShow: 4,
+						slidesToScroll: 1,
+						autoplay: true,
+						autoplaySpeed: 1000,
+						arrows: false,
+						dots: false,
+							pauseOnHover: false,
+							responsive: [{
+							breakpoint: 768,
+							settings: {
+								slidesToShow: 3
+							}
+						}, {
+							breakpoint: 520,
+							settings: {
+								slidesToShow: 2
+							}
+						}]
+					});
+				});
+				
+				
+				
+				
 				var treeContainer = document.getElementById("treeContainer");
 				var playBtn = document.getElementById('play');
 				var stopBtn = document.getElementById('stop');
