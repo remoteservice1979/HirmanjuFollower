@@ -211,6 +211,38 @@
 .slick-arrow.slick-hidden {
     display: none;
 }
+			
+			#footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+
+
+
+
+/* For the demo only */
+#content {
+    background: #D0E5FF;
+    padding: 20px;
+    color: #00214B;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 1.8;
+}
+#footer {
+    background: #0070FF;
+    line-height: 2;
+    text-align: center;
+    color: #042E64;
+    font-size: 30px;
+    font-family: sans-serif;
+    font-weight: bold;
+    text-shadow: 0 1px 0 #84BAFF;
+    box-shadow: 0 0 15px #00214B
+}
 </style>
 		<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 		
@@ -475,6 +507,7 @@
   background-position: center;
   
   background-size: cover;" onload="init();">
+		<div id="content">
 		<div id="treeContainer"/>
 		<button id="test" onclick="getData();">Refresh
                 </button>
@@ -485,12 +518,12 @@
 		<button id="stop">Stop</button>
 	</div>
 	
- 
+		</div>
 																     
 
 	</body>
 	     
-		
+		<div id="footer">
 		 <div class="customer-logos">
 		  <div class="slide"><img src="https://remoteservice1979.github.io/HirmanjuFollower/src/Hirmanju.jpg"></div>
 		  <div class="slide"><img src="https://remoteservice1979.github.io/HirmanjuFollower/src/Hirmanju1.jpeg"></div>
@@ -502,6 +535,7 @@
                  <div class="slide"><img src="https://remoteservice1979.github.io/HirmanjuFollower/src/Hirmanju.jpg"></div>
 		
                  </div>
+	</div>
 		
 	      
 </html>
